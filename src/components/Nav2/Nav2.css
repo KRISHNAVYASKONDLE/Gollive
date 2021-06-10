@@ -1,0 +1,42 @@
+.Tournament-Container {
+  background: #251942;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Options-Container {
+  height: 80vh;
+  background: #251942;
+  margin-top: 0.2em;
+}
+
+.newage-esports {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0.63px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: -5px;
+}
+.create-tournament {
+  margin-top: -20px;
+  margin-left: 0px;
+  font-size: 14px;
+  width: 170px;
+  height: 18px;
+  letter-spacing: 0.49px;
+  color: #ba32ff;
+  text-align: left;
+  font-family: "Rajdhani";
+  text-transform: uppercase;
+}
+.text-container {
+  padding-left: 15px;
+}
+.Angle-Left {
+  margin-top: 20px;
+  margin-left: 18px;
+  height: 17px;
+}

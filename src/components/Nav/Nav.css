@@ -1,0 +1,36 @@
+.Nav-bar {
+  background: #251942;
+  align-items: center;
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  top: 0px;
+  left: -4px;
+  height: 60px;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  height: 45px;
+  width: 45px;
+  border-radius: 0px;
+  margin-right: 5px;
+}
+
+.GameChar {
+  height: 45px;
+  width: 45px;
+  border-radius: 20px;
+  padding-right: 10px;
+}
+
+.gogame-logo {
+  margin-top: 10px;
+  margin-left: 31px;
+  width: 154px;
+  height: 51px;
+}

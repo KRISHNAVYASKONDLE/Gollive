@@ -1,0 +1,43 @@
+.app {
+  font-family: "Rajdhani", sans-serif;
+  background-color: #16032a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  height: 100%;
+  margin-top: 0.2em;
+}
+
+.left-nav-container {
+  width: 20%;
+}
+
+.tabs-menu-container {
+  width: 80%;
+  padding-left: 1.5em;
+}
+
+.MuiTabs-flexContainer {
+  height: 55px;
+}
+
+.MuiAppBar-colorPrimary {
+  background-color: #16032a !important;
+}
+
+.MuiTab-root {
+  min-width: 100px !important;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.PrivateTabIndicator-colorSecondary-3 {
+  height: 5px !important;
+  background-color: #ba32ff !important;
+  /* width: 60px !important;
+  left: 20px !important; */
+}
