@@ -109,7 +109,7 @@ function App() {
                 <div className="Skyleague-tournament">
                   Sky league tournament
                 </div>
-                <div className="input-container">
+                <div className="add-flex-class">
                   <MuiPickersUtilsProvider utils={DateFnsUtils}>
                     <KeyboardDatePicker
                       autoOk
@@ -121,20 +121,15 @@ function App() {
                       onChange={(date) => handleSelectedDate(date)}
                     />
                   </MuiPickersUtilsProvider>
-                  <TextField
-                    id="outlined-basic"
-                    label="MATCH TYPE"
-                    variant="outlined"
-                  />
+                  <TextField style={{ margin: "0 0 0 1em" }} id="outlined-basic" label="MATCH TYPE" variant="outlined" />
                 </div>
               </div>
 
               <div className="match-details">
                 <div className="matchdetails-header">TEAMS AND SCORE</div>
-
-                <div className="teamselect-container">
+                <div className="add-flex-class">
                   <FormControl variant="outlined" className={classes.formControl}>
-                    <InputLabel>
+                    <InputLabel id="homeTeamSelectLabel">
                       Select Your Team
                     </InputLabel>
                     <Select value={homeTeam} onChange={handleHomeTeam} label="Select Your Team">
@@ -145,18 +140,11 @@ function App() {
                     </Select>
                   </FormControl>
 
-                  <FormControl
-                    variant="outlined"
-                    className={classes.formControl}
-                  >
-                    <InputLabel id="demo-simple-select-outlined-label">
+                  <FormControl variant="outlined" className={classes.formControl}>
+                    <InputLabel id="guestTeamSelectLabel">
                       Select Your Team
                     </InputLabel>
-                    <Select value={guestTeam} onChange={handleGuestTeam} label="Select Your Team"
-                    >
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
+                    <Select value={guestTeam} onChange={handleGuestTeam} label="Select Your Team">
                       <MenuItem value={"DLEHI DRAGONS"}>DLEHI DRAGONS</MenuItem>
                       <MenuItem value={"KOLKATA TRIDENTS"}>
                         KOLKATA TRIDENTS
@@ -164,245 +152,167 @@ function App() {
                     </Select>
                   </FormControl>
                 </div>
-
-                <TextField
-                  type="number"
-                  id="outlined-basic"
-                  label="type home team score"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="type guest team score"
-                  variant="outlined"
-                />
+                <div className="teamScores-container add-flex-class">
+                  <TextField id="homeTeamScore" label="TYPE HOME TEAM SCORE" variant="outlined" />
+                  <TextField id="guestTeamScore" label="TYPE GUEST TEAM SCORE" variant="outlined" />
+                </div>
               </div>
+
               <div className="match-details">
+                <div className="matchdetails-header">COMMUNITY PREDICTIONS</div>
                 <form className={classes.root} noValidate autoComplete="off">
-                  <TextField
-                    spacing="1"
-                    id="outlined-basic"
-                    label="result:1-2"
-                    variant="outlined"
-                  />
-                  <TextField
-                    spacing="1"
-                    id="outlined-basic"
-                    label="result:3-0"
-                    variant="outlined"
-                  />{" "}
-                  <TextField
-                    spacing="1"
-                    id="outlined-basic"
-                    label="result:2-1"
-                    variant="outlined"
-                  />{" "}
-                  <TextField
-                    spacing="1"
-                    type="Number"
-                    id="outlined-basic"
-                    label="result:0-3"
-                    variant="outlined"
-                  />
+                  <div className="add-flex-class">
+                    <TextField spacing="1" id="result1.2" label="TYPE POLL PERCENTAGE" variant="outlined" />
+                    <TextField spacing="1" id="result2.1" label="TYPE POLL PERCENTAGE" variant="outlined" />
+                  </div>
+                  <div className="add-flex-class">
+                    <TextField spacing="1" id="result3.0" label="TYPE POLL PERCENTAGE" variant="outlined" />
+                    <TextField spacing="1" id="result3.0" label="TYPE POLL PERCENTAGE" variant="outlined" />
+                  </div>
                 </form>
               </div>
             </div>
-            Basics
           </Tabpanel>
 
           {/* <DatePicker value={Date} onChange={setDate} /> */}
           <Tabpanel value={currentTab} index={1}>
-            {/* MAP PICKS */}
+
             <div className="mappicks-container">
               <div className="firstmap-container">
                 <div className="firstmap">first map</div>
-                <FormControl variant="outlined" className={selectStyles.formCntrll}>
-                  <InputLabel id="demo-simple-select-outlined-label">
-                    selectloc
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    value={firstMap}
-                    onChange={handleFirstMap}
-                    label="Age"
-                  >
-                    <MenuItem value="">
-                      <em>select</em>
-                    </MenuItem>
-                    <MenuItem value={10}>delhi</MenuItem>
-                    <MenuItem value={20}>hyderabad</MenuItem>
-                    <MenuItem value={30}>pune</MenuItem>
-                  </Select>
-                </FormControl>
-                <FormControl variant="outlined" className={classes.formControl}>
-                  <InputLabel id="demo-simple-select-outlined-label">
-                    Select Your Team
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    value={firstPickingTeam}
-                    onChange={handleFirstPickingTeam}
-                    label="Select Your Team"
-                  >
-                    <MenuItem value="">
-                      <em>None</em>
-                    </MenuItem>
-                    <MenuItem value={"DLEHI DRAGONS"}>
-                      DLEHI DRAGONS <Avatar alt="Remy Sharp" src={TeamBadge} />
-                    </MenuItem>
-                    <MenuItem value={"KOLKATA TRIDENTS"}>
-                      KOLKATA TRIDENTS
-                    </MenuItem>
-                  </Select>
-                </FormControl>
-                <TextField
-                  id="outlined-basic"
-                  label="home team score"
-                  variant="outlined"
-                />
-                <TextField id="outlined-basic" label="guest team score"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="vod link"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="upload file"
-                  variant="outlined"
-                />
+                <div className="add-flex-class">
+                  <FormControl variant="outlined" className={selectStyles.formCntrll}>
+                    <InputLabel id="demo-simple-select-outlined-label">
+                      SELECT MAP
+                    </InputLabel>
+                    <Select id="firstMap" value={firstMap} onChange={handleFirstMap} label="firstMap">
+                      <MenuItem value={10}>Delhi</MenuItem>
+                      <MenuItem value={20}>Hyderabad</MenuItem>
+                      <MenuItem value={30}>Pune</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <FormControl variant="outlined" className={classes.formControl}>
+                    <InputLabel id="demo-simple-select-outlined-label">
+                      SELECT A PICKING TEAM
+                    </InputLabel>
+                    <Select id="firstpickingteam" value={firstPickingTeam} onChange={handleFirstPickingTeam} label="SELECT A PICKING TEAM">
+                      <MenuItem value={"DLEHI DRAGONS"}>
+                        DLEHI DRAGONS <Avatar alt="Remy Sharp" src={TeamBadge} />
+                      </MenuItem>
+                      <MenuItem value={"KOLKATA TRIDENTS"}>
+                        KOLKATA TRIDENTS
+                      </MenuItem>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className="add-flex-class">
+                  <TextField id="outlined-basic" label="HOME TEAM SCORE" variant="outlined" />
+                  <TextField id="outlined-basic" label="GUEST TEAM SCORE" variant="outlined" />
+                </div>
+                <div className="add-flex-class">
+                  <TextField id="outlined-basic" label="VOD LINK" variant="outlined" />
+                  <TextField id="outlined-basic" label="UPLOAD SCREENSHOT" variant="outlined" />
+                </div>
               </div>
+
               <div className="firstmap-container">
                 <div className="secondmap">second map</div>
-                <FormControl variant="outlined" className={selectStyles.formCntrll}>
-                  <InputLabel id="demo-simple-select-outlined-label">
-                    selectloc
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    value={secondMap}
-                    onChange={handleSecondMap}
-                    label="Age"
-                  >
-                    <MenuItem value="">
-                      <em>select</em>
-                    </MenuItem>
-                    <MenuItem value={10}>delhi</MenuItem>
-                    <MenuItem value={20}>hyderabad</MenuItem>
-                    <MenuItem value={30}>pune</MenuItem>
-                  </Select>
-                </FormControl>
-                <FormControl variant="outlined" className={classes.formControl}>
-                  <InputLabel id="demo-simple-select-outlined-label">
-                    Select Your Team
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    value={secondPickingTeam}
-                    onChange={handleSecondPickingTeam}
-                    label="Select Your Team"
-                  >
-                    <MenuItem value="">
-                      <em>None</em>
-                    </MenuItem>
-                    <MenuItem value={"DLEHI DRAGONS"}>
-                      DLEHI DRAGONS <Avatar alt="Remy Sharp" src={TeamBadge} />
-                    </MenuItem>
-                    <MenuItem value={"KOLKATA TRIDENTS"}>
-                      KOLKATA TRIDENTS
-                    </MenuItem>
-                  </Select>
-                </FormControl>
-                <TextField
-                  id="outlined-basic"
-                  label="home team score"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="guest team score"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="vod link"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="upload file"
-                  variant="outlined"
-                />
+                <div className="add-flex-class">
+                  <FormControl variant="outlined" className={selectStyles.formCntrll}>
+                    <InputLabel id="demo-simple-select-outlined-label">
+                      SELECT MAP
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-outlined-label"
+                      id="demo-simple-select-outlined"
+                      value={secondMap}
+                      onChange={handleSecondMap}
+                      label="SELECT MAP"
+                    >
+                      <MenuItem value="">
+                        <em>select</em>
+                      </MenuItem>
+                      <MenuItem value={10}>delhi</MenuItem>
+                      <MenuItem value={20}>hyderabad</MenuItem>
+                      <MenuItem value={30}>pune</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <FormControl variant="outlined" className={classes.formControl}>
+                    <InputLabel id="demo-simple-select-outlined-label">
+                      Select Your Team
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-outlined-label"
+                      id="demo-simple-select-outlined"
+                      value={secondPickingTeam}
+                      onChange={handleSecondPickingTeam}
+                      label="Select Your Team"
+                    >
+                      <MenuItem value="">
+                        <em>None</em>
+                      </MenuItem>
+                      <MenuItem value={"DLEHI DRAGONS"}>
+                        DLEHI DRAGONS <Avatar alt="Remy Sharp" src={TeamBadge} />
+                      </MenuItem>
+                      <MenuItem value={"KOLKATA TRIDENTS"}>
+                        KOLKATA TRIDENTS
+                      </MenuItem>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className="add-flex-class">
+                  <TextField id="outlined-basic" label="HOME TEAM SCORE" variant="outlined" />
+                  <TextField id="outlined-basic" label="GUEST TEAM SCORE" variant="outlined" />
+                </div>
+                <div className="add-flex-class">
+                  <TextField id="outlined-basic" label="VOD LINK" variant="outlined" />
+                  <TextField id="outlined-basic" label="UPLOAD SCREENSHOT" variant="outlined" />
+                </div>
               </div>
               <div className="firstmap-container">
                 <div className="thirdmap">third map</div>
-                <FormControl variant="outlined" className={selectStyles.formCntrll}>
-                  <InputLabel id="demo-simple-select-outlined-label">
-                    selectloc
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    value={thirdMap}
-                    onChange={handleThirdMap}
-                    label="Age"
-                  >
-                    <MenuItem value="">
-                      <em>select</em>
-                    </MenuItem>
-                    <MenuItem value={10}>delhi</MenuItem>
-                    <MenuItem value={20}>hyderabad</MenuItem>
-                    <MenuItem value={30}>pune</MenuItem>
-                  </Select>
-                </FormControl>
-                <FormControl variant="outlined" className={classes.formControl}>
-                  <InputLabel id="demo-simple-select-outlined-label">
-                    Select Your Team
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    value={thirdPickingTeam}
-                    onChange={handleThirdPickingTeam}
-                    label="Select Your Team"
-                  >
-                    <MenuItem value="">
-                      <em>None</em>
-                    </MenuItem>
-                    <MenuItem value={"DLEHI DRAGONS"}>
-                      DLEHI DRAGONS <Avatar alt="Remy Sharp" src={TeamBadge} />
-                    </MenuItem>
-                    <MenuItem value={"KOLKATA TRIDENTS"}>
-                      KOLKATA TRIDENTS
-                    </MenuItem>
-                  </Select>
-                </FormControl>
-                <TextField
-                  id="outlined-basic"
-                  label="home team score"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="guest team score"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="vod link"
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="upload file"
-                  variant="outlined"
-                />
+                <div className="add-flex-class">
+                  <FormControl variant="outlined" className={selectStyles.formCntrll}>
+                    <InputLabel id="demo-simple-select-outlined-label">
+                      selectloc
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-outlined-label"
+                      id="demo-simple-select-outlined"
+                      value={thirdMap}
+                      onChange={handleThirdMap}
+                      label="Age"
+                    >
+                      <MenuItem value="">
+                        <em>select</em>
+                      </MenuItem>
+                      <MenuItem value={10}>delhi</MenuItem>
+                      <MenuItem value={20}>hyderabad</MenuItem>
+                      <MenuItem value={30}>pune</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <FormControl variant="outlined" className={classes.formControl}>
+                    <InputLabel id="demo-simple-select-outlined-label">
+                      Select Your Team
+                    </InputLabel>
+                    <Select id="thirdPickingTeam" value={thirdPickingTeam} onChange={handleThirdPickingTeam} label="Select Your Team">
+                      <MenuItem value={"DLEHI DRAGONS"}>
+                        DLEHI DRAGONS <Avatar alt="Remy Sharp" src={TeamBadge} />
+                      </MenuItem>
+                      <MenuItem value={"KOLKATA TRIDENTS"}>
+                        KOLKATA TRIDENTS
+                      </MenuItem>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className="add-flex-class">
+                  <TextField id="outlined-basic" label="HOME TEAM SCORE" variant="outlined" />
+                  <TextField id="outlined-basic" label="GUEST TEAM SCORE" variant="outlined" />
+                </div>
+                <div className="add-flex-class">
+                  <TextField id="outlined-basic" label="VOD LINK" variant="outlined" />
+                  <TextField id="outlined-basic" label="UPLOAD SCREENSHOT" variant="outlined" />
+                </div>
               </div>
             </div>
           </Tabpanel>
