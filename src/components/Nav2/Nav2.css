@@ -5,11 +5,35 @@
   flex-direction: row;
 }
 .Options-Container {
-  height: 80vh;
+  display: flex;
+  flex-direction: column;
   background: #251942;
   margin-top: 0.2em;
+  font-weight: 600;
+  float: left;
+  width: 100%;
+  height: 80vh;
+  letter-spacing: 0.65px;
 }
-
+.postion-setter {
+  margin-top: 1.3em;
+  margin-left: 20%;
+}
+.shareir {
+  margin-top: 50px;
+}
+.m0 {
+  font-weight: 600;
+}
+.m1,
+.m2,
+.m3,
+.m4,
+.m6,
+.m7 {
+  height: 6px;
+  font-weight: 300;
+}
 .newage-esports {
   font-family: "Rajdhani", sans-serif;
   font-size: 18px;

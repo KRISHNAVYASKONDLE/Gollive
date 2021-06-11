@@ -4,22 +4,35 @@
   color: white;
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 .main-container {
   display: flex;
-  height: 100%;
+  max-height: 89vh;
   margin-top: 0.2em;
 }
 
 .left-nav-container {
   width: 20%;
+  max-height: 90vh;
 }
 
 .tabs-menu-container {
   width: 80%;
+  max-height: 90vh;
   padding-left: 1em;
+  overflow: auto;
+}
+
+.input-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 2em;
+}
+
+.PrivateTabIndicator-colorSecondary-7 {
+  height: 5px !important;
+  background-color: #ba32ff !important;
 }
 
 .MuiTabs-flexContainer {
@@ -30,61 +43,88 @@
   background-color: #16032a !important;
 }
 
+.MuiTab-wrapper {
+  font-size: 1.2em;
+  font-family: "Rajdhani";
+  font-weight: 600;
+}
+
+.MuiInputBase-input {
+  color: white !important;
+  width: 464px !important;
+}
+
 .MuiTab-root {
   min-width: 100px !important;
   font-family: "Rajdhani", sans-serif;
 }
 
-.PrivateTabIndicator-colorSecondary-3 {
-  height: 5px !important;
-  background-color: #ba32ff !important;
-  /* width: 60px !important;
-  left: 20px !important; */
+.MuiOutlinedInput-notchedOutline {
+  border: 1.5px solid #5637a2 !important;
 }
-.MuiInputBase-input {
-  font-family: "Rajdhani";
-  color: white !important;
-  width: 464px !important;
-  border: 2px !important;
-  border-color: #5637a2 !important;
-  height: 50px !important;
-  margin: 0 !important;
-  display: block;
-  padding: 6px 0 7px !important;
-  min-width: 0;
-  /* letter-spacing: 2px; */
-  background: #21123a !important;
-  box-sizing: content-box !important;
-  letter-spacing: inherit !important;
-  animation-duration: 10ms !important;
-  -webkit-tap-highlight-color: transparent !important;
-  border-radius: 10px;
-}
-.input-container {
-  display: flex;
-  margin-top: 9px;
-  margin-left: 19px;
-  width: 464px;
-  height: 50px;
-  border: 1px solid var(--unnamed-color-5637a2);
-  border: #5637a2;
-  border-radius: 20px;
-  opacity: 1;
-}
-.MuiInputBase-root {
-  color: rgba(0, 0, 0, 0.87);
-  cursor: text;
-  display: inline-flex;
+
+.MuiOutlinedInput-root {
   position: relative;
-  font-size: 1rem;
-  box-sizing: border-box;
-  align-items: center;
-  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
-  /* font-weight: 400; */
-  line-height: 1.1876em;
-  letter-spacing: 0.00938em;
+  border-radius: 5px !important;
+  height: 50px;
 }
+
+.MuiOutlinedInput-inputAdornedEnd {
+  padding-left: 20px !important;
+}
+
+.MuiOutlinedInput-adornedEnd {
+  width: 461px;
+}
+
+.MuiIconButton-label {
+  width: 100%;
+  color: #ba32ff !important;
+}
+
+.MuiInputLabel-outlined {
+  color: white !important;
+}
+
+.MuiOutlinedInput-input {
+  padding: 18.5px 14px !important;
+}
+
 .match-details {
+  margin: 20px 0 0 20px;
+  width: 88%;
+  padding: 0px 30px;
+  height: 190px;
+  background: #21123a;
+}
+
+.matchdetails-header,
+.firstmap,
+.secondmap,
+.thirdmap {
+  padding-top: 15px;
+  font-size: 15px;
+  margin-left: -5px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.selected-tournament {
+  padding: 15px 0 0 0;
+  text-transform: uppercase;
+  font: 600 13px Rajdhani;
+  color: #5637a2;
+}
+
+.Skyleague-tournament {
+  padding: 5px 0 0 0;
+  font-size: 23px;
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.teams-and-score {
   margin-top: 20px;
   margin-left: 0x;
   width: 97%;
@@ -93,31 +133,20 @@
   background: #21123a 0% 0% no-repeat padding-box;
   opacity: 1;
 }
-.matchdetails-header {
-  padding-top: 17px;
-  padding-left: 19px;
-  width: 128px;
-  height: 21px;
-  color: #ffffff;
-  text-align: left;
-  font-size: 15px;
-  font-family: "Rajdhani", sans-serif;
-  letter-spacing: 0.56px;
-  text-transform: uppercase;
-  opacity: 100%;
+.prediction-container {
+  margin-top: 20px;
+  margin-left: 0x;
+  width: 97%;
+  height: 190px;
+  background: var(--unnamed-color-21123a) 0% 0% no-repeat padding-box;
+  background: #21123a 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
 
-.selected-tournament {
-  padding: 15px 0 0 30px;
-  text-transform: uppercase;
-  font: 600 13px Rajdhani;
-  color: #5637a2;
-}
-
-.Skyleague-tournament {
-  padding: 5px 0 0 30px;
-  font-size: 23px;
-  font-family: "Rajdhani", sans-serif;
-  text-transform: uppercase;
-  opacity: 0.9;
+.firstmap-container {
+  margin-top: 20px;
+  padding-left: 30px;
+  width: 97%;
+  height: 300px;
+  background: #21123a;
 }
