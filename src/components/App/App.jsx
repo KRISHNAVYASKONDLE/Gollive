@@ -13,6 +13,7 @@ import FormControl from "@material-ui/core/FormControl";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import TeamBadge from "./../../assets/TeamBadge.png";
+import Thirdpage from "../Thirdpage/Thirdpage";
 
 // styles for select components
 const selectStyles = makeStyles((theme) => ({
@@ -317,7 +318,7 @@ function App() {
             </div>
           </Tabpanel>
           <Tabpanel value={currentTab} index={2}>
-            <Nav />
+            <Thirdpage />
           </Tabpanel>
           <Tabpanel value={currentTab} index={3}>
             Guest TEAM STATS

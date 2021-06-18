@@ -1,0 +1,143 @@
+.thirdpagemain-container{
+
+
+}
+.DelhiDragonslogo-container{
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+    margin-top: 20px;  
+
+}
+.delhitext-container{
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 40px;
+    letter-spacing: 0.75px;
+    width: 200px;
+
+}
+
+
+.teamdetails-container{
+    width:97%;
+    height:110px;
+    margin-left:10px;
+    margin-right:10px;
+    background-color: #21123A;
+    display: flex;
+    flex-direction: row;
+}
+.team-mem{
+width: 260px;
+height:50px;
+margin-left: 60%;
+margin-top: 30px;
+justify-content: right;
+}
+.seperator{
+    width: 77%;
+    justify-self: flex-end;
+}
+
+.textdetails-container .flex {
+    display: flex;
+}
+
+.textdetails-container .MuiInputBase-input {
+    font: inherit;
+    color: currentColor;
+    width: 150px !important;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+    -webkit-tap-highlight-color: transparent;
+}
+.textdetails-container .MuiFormLabel-root {
+    color: #5637A2 !important;
+    padding: 0;
+    font-size: 1.1rem;
+    font-family: 'Rajdhani';
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.00938em;
+}
+
+.textdetails-container .MuiFormControl-root {
+    border: 0;
+    margin-right: 15px !important;
+    margin-bottom: 15px !important;
+    display: inline-flex;
+    padding: 0;
+    position: relative;
+    min-width: 0;
+    flex-direction: column;
+    vertical-align: top;
+}
+
+.allmaps-text{
+    margin-top: 15px;
+    font-size: 16px;
+    margin-left: 15px;
+    width:100px;
+    font-weight:bold;
+}
+
+.allmaps-container{
+    background-color: #21123A ;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left:10px;
+    width: 97%;
+}
+
+.playerimg-container{
+    margin-top:-30px;
+    margin-left:40px;
+}
+.VALYN-container{
+        margin-left: 18px;
+        margin-top: 47px;
+        font-size: 18px;
+        font-weight: 100px;
+        font-family: "Rajdhani";
+    }
+
+.allmapsvalue-conatainer
+    {
+    display: flex;
+    flex-direction: row;
+    }
+
+.textdetails-container{
+    margin-left: 90px;
+    display:inline-block;
+    width: 1000px;
+    height:150px;
+}
+.textdetails-container .lastone  .MuiInputBase-input {
+    font: inherit;
+    color: currentColor;
+    width: 343px !important;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: inline-block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+    -webkit-tap-highlight-color: transparent;
+}
