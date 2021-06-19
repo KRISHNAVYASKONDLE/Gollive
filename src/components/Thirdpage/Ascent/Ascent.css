@@ -1,0 +1,96 @@
+.ascentmain-containter{
+    background-color: #21123A;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.ascenttext-container{
+    
+        margin-top: 15px;
+        font-size: 16px;
+        margin-left: 15px;
+        width:100px;
+        font-weight:bold;
+    
+}
+.upperdivtext-container
+{
+    margin-top: 35px;
+}
+.upperdivtext-container .MuiInputBase-input {
+    font: inherit;
+    color: currentColor;
+    width: 430px !important;
+    border: 0;
+    height: 1.1876em;
+    margin-right: 10px ;
+    display: inline-block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+    -webkit-tap-highlight-color: transparent;
+}
+.diag1-box{
+    font-size: 20px;
+    margin-inline:5px;
+    margin-top:7px;
+    margin-bottom: 7px;
+}
+.upperdivtext-container .MuiFormLabel-root {
+    color: #5637A2 !important;
+    padding: 0;
+    font-size: 1rem;
+    font-family: 'Rajdhani';
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.00938em;
+    margin-left: 1586/540px;
+}
+
+.Sf1STHALFtext-container{
+    FONT-SIZE: 20px;
+    margin-top: 33px;
+    margin-left: 26px;
+}
+.upperdivtext-container .MuiFormControl-root {
+    border: 0;
+    margin-left: 25px;
+    display: inline-flex;
+    padding: 0;
+    position: relative;
+    min-width: 0;
+    flex-direction: column;
+    vertical-align: top;
+}
+.allnumbers-conatiner{
+    margin-left: 24px;
+    margin-top:25px;
+    display: flex;
+    flex-direction: row;
+}
+.commonsymbol-container{
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    height: 70px;
+    margin-left:6px;
+    background-color: #16032A;
+    border-style: solid;
+    border-color:#5637A2;
+    border-width: 1px;
+
+    align-items: center;
+}
+.Sf1THALFtext-container{
+    margin-top: 20px;
+    margin-left:25px;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.secTHALFtext-container{
+    padding-top:159px;
+}
