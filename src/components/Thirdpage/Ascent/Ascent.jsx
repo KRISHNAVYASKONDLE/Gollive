@@ -5,6 +5,8 @@ import unionred from "./../../../assets/images/unionred.svg"
 import unionblue from "./../../../assets/images/unionblue.svg"
 import fire from "./../../../assets/images/fire.svg"
 import palas from "./../../../assets/images/palas.svg"
+import arrow from "./../../../assets/images/arrow.svg"
+import plus from "./../../../assets/images/plus.svg"
 
 const Ascent = () => {
     return (
@@ -65,7 +67,23 @@ const Ascent = () => {
 
 
             </div>
-            <div className="secTHALFtext-container">1ST HALF</div>
+            <div className="secTHALFtext-container">2nd HALF</div>
+            <div className="bothinputtext-container">
+                <TextField id="selectagents-container" label="SELECT AGENTS PICKED" variant="outlined" />
+                <TextField id="selectagents-container" label="SELECT AGENTS PICKED" variant="outlined" />
+            </div>
+
+
+            <div className="newcreating-container">
+                <div className="commonsymbol-container">
+                    <span className="diag2-box">13</span>
+                    <img className="unionred-cont" src={arrow} alt="arrow" />
+                </div>
+                <div className="scndhalftwo-container">
+                    <img className="newnumcreate" src={plus} alt="plus" />
+                </div>
+            </div>
+
 
         </div>
 

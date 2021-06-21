@@ -14,6 +14,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import TeamBadge from "./../../assets/TeamBadge.png";
 import Thirdpage from "../Thirdpage/Thirdpage";
+import Button from '@material-ui/core/Button';
 
 // styles for select components
 const selectStyles = makeStyles((theme) => ({
@@ -30,7 +31,8 @@ function App() {
   const classes = selectStyles();
 
   // tabs selection
-  const [currentTab, setCurrentTab] = React.useState(0);
+  var [currentTab, setCurrentTab] = React.useState(0);
+
   const handleTabChange = (e, val) => {
     setCurrentTab(val);
   };
@@ -172,6 +174,12 @@ function App() {
                   </div>
                 </form>
               </div>
+              <div className="nextdirector">
+                <div className="nextdet-container">
+                  <Button onClick={() => { setCurrentTab(1) }} variant="contained" color="primary">   NEXT   </Button>
+                </div>
+              </div>
+
             </div>
           </Tabpanel>
 
@@ -316,9 +324,25 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="nextdirector">
+              <div className="backdet-container">
+                <Button onClick={() => { setCurrentTab(0) }} variant="contained" color="primary"> BACK</Button>
+              </div>
+              <div className="secnextdet-container">
+                <Button onClick={() => { setCurrentTab(2) }} variant="contained" color="primary">   NEXT   </Button>
+              </div>
+            </div>
+
+
           </Tabpanel>
           <Tabpanel value={currentTab} index={2}>
             <Thirdpage />
+            <div className="nextdirector">
+              <div className="backdet-container">
+                <Button onClick={() => { setCurrentTab(1) }} variant="contained" color="primary"> BACK </Button>
+              </div>
+
+            </div>
           </Tabpanel>
           <Tabpanel value={currentTab} index={3}>
             Guest TEAM STATS

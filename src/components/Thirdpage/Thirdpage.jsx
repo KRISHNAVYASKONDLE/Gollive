@@ -7,6 +7,7 @@ import DelhiDragons from "../../assets/DelhiDragons.svg"
 import "./Thirdpage.css";
 import Cmnacsandother from "../Cmnacsandother/Cmnacsandother";
 import Ascent from "./Ascent/Ascent";
+import Seccmn from "../Seccmn/Seccmn";
 
 const Defaultstate = {
     name: "",
@@ -37,6 +38,23 @@ const Thirdpage = () => {
             </div>
             {/* second time */}
             <Ascent />
+            <div className="playerstatsmain-container">
+                < div className="allmaps-text">PLAYER STATS, TOTAL</div>
+                <Cmnacsandother name={"VALYN"} />
+                <Cmnacsandother name={"SHOWTIME"} />
+                <Cmnacsandother name={"SHOWTIME"} />
+                <Cmnacsandother name={"SHOWTIME"} />
+                <Cmnacsandother name={"SHOWTIME"} />
+
+            </div>
+            <div className="playerstatsmain-container">
+                < div className="allmaps-text">PLAYER STATS, TOTAL</div>
+                <Seccmn name={"VALYN"} />
+                <Seccmn name={"SHOWTIME"} />
+                <Seccmn name={"SHOWTIME"} />
+                <Seccmn name={"SHOWTIME"} />
+                <Seccmn name={"SHOWTIME"} />
+            </div>
 
         </div>
 

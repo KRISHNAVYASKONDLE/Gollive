@@ -1,11 +1,9 @@
 import React from 'react'
-import "./Cmnacsandother.css"
+import "./Seccmn.css"
 import playerimg from "../../assets/playerimg.svg";
 import TextField from "@material-ui/core/TextField";
 
-
-
-const Cmnacsandother = ({ name }) => {
+const Seccmn = ({ name }) => {
 
     return (
         <div className="allmapsvalue-conatainer">
@@ -21,13 +19,9 @@ const Cmnacsandother = ({ name }) => {
                 </div>
                 <div className="flex">
                     <TextField id="ACS-container" label="ESR,%" variant="outlined" />
-                    <TextField id="ACS-container" label="MVP" variant="outlined" />
-                    <span className="lastone">
-                        <TextField id="selectagents-container" label="SELECT AGENTS PICKED" variant="outlined" />
-                    </span>
 
                 </div>
             </div>
         </div>);
 }
-export default Cmnacsandother;
+export default Seccmn;
