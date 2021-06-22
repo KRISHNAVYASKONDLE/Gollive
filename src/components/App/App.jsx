@@ -15,6 +15,7 @@ import Avatar from "@material-ui/core/Avatar";
 import TeamBadge from "./../../assets/TeamBadge.png";
 import Thirdpage from "../Thirdpage/Thirdpage";
 import Button from '@material-ui/core/Button';
+import Axios from "axios";
 
 // styles for select components
 const selectStyles = makeStyles((theme) => ({
@@ -85,6 +86,7 @@ function App() {
   const handleThirdPickingTeam = (event) => {
     setThirdPickingTeam(event.target.value);
   };
+  // const [answer,setAnswer]=useState("");
 
   return (
     <div className="app">
@@ -179,8 +181,11 @@ function App() {
                   <Button onClick={() => { setCurrentTab(1) }} variant="contained" color="primary">   NEXT   </Button>
                 </div>
               </div>
-
+              <div className="forapitest-container">
+                <button onClick={callApi} className="reqapi" variant="outlined" color="primary"  >hello</button>
+              </div>
             </div>
+
           </Tabpanel>
 
           {/* <DatePicker value={Date} onChange={setDate} /> */}
@@ -346,11 +351,76 @@ function App() {
           </Tabpanel>
           <Tabpanel value={currentTab} index={3}>
             Guest TEAM STATS
+
           </Tabpanel>
+
         </div>
       </div>
     </div>
   );
+}
+
+function callApi() {
+  var data = JSON.stringify({
+    "@class": ".LogEventRequest",
+    "eventKey": "LeaugeTeamLBUpdate",
+    "leagueId": "Sky Esports League-1617165350190",
+    "leagueAdditionId": "Sky Esports League-1617165350190-March-2021-1617165492876",
+    "homeTeamScore": 3,
+    "awayTeamScore": 0,
+    "matchStartTime": 1619877600000,
+    "homeTeam": "Kolkata Tridents",
+    "awayTeam": "Punjab Pinnacles",
+    "matchId": "Sky Esports League-1617165350190-March-2021-1617165492876-Kolkata Tridents-1619877600000",
+    "matchLink": "",
+    "selectedByAwayTeam": [
+      {
+        "homeTeamScore": 13,
+        "awayTeamScore": 5,
+        "screenShot": "",
+        "videoLink": "",
+        "mapName": "ICEBOX"
+      }
+    ],
+    "selectedByHomeTeam": [
+      {
+        "homeTeamScore": 13,
+        "awayTeamScore": 10,
+        "screenShot": "",
+        "videoLink": "",
+        "mapName": "HAVEN"
+      },
+      {
+        "homeTeamScore": 13,
+        "awayTeamScore": 8,
+        "screenShot": "",
+        "videoLink": "",
+        "mapName": "ASCENT"
+      }
+    ],
+    "homeTeamTieBreaker": 16,
+    "awayTeamTieBreaker": -16,
+    "playerId": "60378db593d80404f7a18234"
+  });
+
+  var config = {
+    method: 'post',
+    url: 'https://h391398vkuek.preview.gamesparks.net/rs/debug/UZVkxRGqK5ewFbmMrEg2yuseepqcm5Tf/LogEventRequest',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: data
+  };
+
+  Axios(config)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+
 }
 
 function Tabpanel(props) {

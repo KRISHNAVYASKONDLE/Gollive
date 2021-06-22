@@ -9,9 +9,7 @@ import Cmnacsandother from "../Cmnacsandother/Cmnacsandother";
 import Ascent from "./Ascent/Ascent";
 import Seccmn from "../Seccmn/Seccmn";
 
-const Defaultstate = {
-    name: "",
-}
+var name = "";
 
 const Thirdpage = () => {
     return (
