@@ -45,6 +45,7 @@ function App() {
   const handleClick = () => {
 
     setOpen(true);
+
     setCurrentTab(1);
   };
 
@@ -242,7 +243,7 @@ function App() {
               </div>
               <div className="nextdirector">
                 <div className="nextdet-container">
-                  <Button onClick={handleClick} variant="contained" color="primary">   NEXT   </Button>
+                  <Button onClick={() => { handleClick(); callApi(); }} variant="contained" color="primary">   NEXT   </Button>
 
                 </div>
               </div>
