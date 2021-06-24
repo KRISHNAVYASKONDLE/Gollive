@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Gollive/static/css/main.6cc219c6.chunk.css",
-    "main.js": "/Gollive/static/js/main.e0b37e70.chunk.js",
-    "main.js.map": "/Gollive/static/js/main.e0b37e70.chunk.js.map",
+    "main.js": "/Gollive/static/js/main.f42b13df.chunk.js",
+    "main.js.map": "/Gollive/static/js/main.f42b13df.chunk.js.map",
     "runtime-main.js": "/Gollive/static/js/runtime-main.fe4b14c2.js",
     "runtime-main.js.map": "/Gollive/static/js/runtime-main.fe4b14c2.js.map",
     "static/js/2.78c760f5.chunk.js": "/Gollive/static/js/2.78c760f5.chunk.js",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.fe4b14c2.js",
     "static/js/2.78c760f5.chunk.js",
     "static/css/main.6cc219c6.chunk.css",
-    "static/js/main.e0b37e70.chunk.js"
+    "static/js/main.f42b13df.chunk.js"
   ]
 }
