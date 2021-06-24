@@ -247,8 +247,6 @@ function App() {
                 </div>
               </div>
               <div className="forapitest-container">
-                <button onClick={callApi} className="reqapi" variant="outlined" color="primary"  >hello</button>
-
 
               </div>
             </div>
