@@ -1,23 +1,32 @@
 {
   "files": {
-    "main.css": "/Gollive/static/css/main.f3e7051b.chunk.css",
-    "main.js": "/Gollive/static/js/main.bf0c0485.chunk.js",
-    "main.js.map": "/Gollive/static/js/main.bf0c0485.chunk.js.map",
+    "main.css": "/Gollive/static/css/main.6cc219c6.chunk.css",
+    "main.js": "/Gollive/static/js/main.7846a641.chunk.js",
+    "main.js.map": "/Gollive/static/js/main.7846a641.chunk.js.map",
     "runtime-main.js": "/Gollive/static/js/runtime-main.fe4b14c2.js",
     "runtime-main.js.map": "/Gollive/static/js/runtime-main.fe4b14c2.js.map",
-    "static/js/2.a6ebd20c.chunk.js": "/Gollive/static/js/2.a6ebd20c.chunk.js",
-    "static/js/2.a6ebd20c.chunk.js.map": "/Gollive/static/js/2.a6ebd20c.chunk.js.map",
+    "static/js/2.78c760f5.chunk.js": "/Gollive/static/js/2.78c760f5.chunk.js",
+    "static/js/2.78c760f5.chunk.js.map": "/Gollive/static/js/2.78c760f5.chunk.js.map",
     "index.html": "/Gollive/index.html",
-    "static/css/main.f3e7051b.chunk.css.map": "/Gollive/static/css/main.f3e7051b.chunk.css.map",
-    "static/js/2.a6ebd20c.chunk.js.LICENSE.txt": "/Gollive/static/js/2.a6ebd20c.chunk.js.LICENSE.txt",
+    "static/css/main.6cc219c6.chunk.css.map": "/Gollive/static/css/main.6cc219c6.chunk.css.map",
+    "static/js/2.78c760f5.chunk.js.LICENSE.txt": "/Gollive/static/js/2.78c760f5.chunk.js.LICENSE.txt",
     "static/media/AngleLeft.790f905c.svg": "/Gollive/static/media/AngleLeft.790f905c.svg",
+    "static/media/DelhiDragons.adc5149c.svg": "/Gollive/static/media/DelhiDragons.adc5149c.svg",
     "static/media/GoGameLogo.ca0a0721.png": "/Gollive/static/media/GoGameLogo.ca0a0721.png",
-    "static/media/menu.dd044c37.svg": "/Gollive/static/media/menu.dd044c37.svg"
+    "static/media/arrow.a972b04a.svg": "/Gollive/static/media/arrow.a972b04a.svg",
+    "static/media/fire.af4728d9.svg": "/Gollive/static/media/fire.af4728d9.svg",
+    "static/media/menu.dd044c37.svg": "/Gollive/static/media/menu.dd044c37.svg",
+    "static/media/palas.b80ed1f4.svg": "/Gollive/static/media/palas.b80ed1f4.svg",
+    "static/media/playerimg.a1bcc8c5.svg": "/Gollive/static/media/playerimg.a1bcc8c5.svg",
+    "static/media/plus.cb3173a2.svg": "/Gollive/static/media/plus.cb3173a2.svg",
+    "static/media/teammem.3cbe6452.svg": "/Gollive/static/media/teammem.3cbe6452.svg",
+    "static/media/unionblue.a9cd623a.svg": "/Gollive/static/media/unionblue.a9cd623a.svg",
+    "static/media/unionred.2eaa4246.svg": "/Gollive/static/media/unionred.2eaa4246.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fe4b14c2.js",
-    "static/js/2.a6ebd20c.chunk.js",
-    "static/css/main.f3e7051b.chunk.css",
-    "static/js/main.bf0c0485.chunk.js"
+    "static/js/2.78c760f5.chunk.js",
+    "static/css/main.6cc219c6.chunk.css",
+    "static/js/main.7846a641.chunk.js"
   ]
 }
