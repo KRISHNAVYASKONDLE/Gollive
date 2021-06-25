@@ -461,26 +461,32 @@ function App() {
       },
       data: data
     };
-
-    Axios(config)
-      .then(function (response) {
-        console.log(response.data.error);
-        if (response.data.error) {
-          setSnackBarMessage('Please check the details entered!');
-          setSnackBarStatus('error');
-          setOpen(true);
-        }
-        else {
-          setSnackBarMessage('Successfully submitted!');
-          setSnackBarStatus('success');
-          setOpen(true);
-          setCurrentTab(1);
-          console.log(response.data);
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    if (hometeamscore < 3 && guestteamscore < 3) {
+      Axios(config)
+        .then(function (response) {
+          console.log(response.data.error);
+          if (response.data.error) {
+            setSnackBarMessage('Please check the details entered!');
+            setSnackBarStatus('error');
+            setOpen(true);
+          }
+          else {
+            setSnackBarMessage('Successfully submitted!');
+            setSnackBarStatus('success');
+            setOpen(true);
+            setCurrentTab(1);
+            console.log(response.data);
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    else {
+      setSnackBarMessage('Please check the details entered!');
+      setSnackBarStatus('error');
+      setOpen(true);
+    }
   }
 }
 function Tabpanel(props) {
