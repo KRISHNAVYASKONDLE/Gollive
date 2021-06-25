@@ -461,7 +461,7 @@ function App() {
       },
       data: data
     };
-    if (hometeamscore < 3 && guestteamscore < 3) {
+    if (hometeamscore <= 3 && guestteamscore <= 3) {
       Axios(config)
         .then(function (response) {
           console.log(response.data.error);
