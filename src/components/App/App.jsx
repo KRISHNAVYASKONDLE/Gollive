@@ -38,16 +38,8 @@ const selectStyles = makeStyles((theme) => ({
 
 function App() {
 
-
-
+  // snackbar
   const [open, setOpen] = React.useState(false);
-
-  const handleClick = () => {
-
-    setOpen(true);
-
-    setCurrentTab(1);
-  };
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -56,27 +48,20 @@ function App() {
     setOpen(false);
   };
 
-  let [dispHelptext, setdispHelptext] = React.useState("");
 
-
-  const [hometeamscore, sethometeamscore] = React.useState(0);
-  let handlehometeamscore = (event) => {
-    sethometeamscore(event.target.value);
-    (hometeamscore < 10) ? setdispHelptext("") : setdispHelptext("Enter Values < 100");
-
-  }
-  let [guestdispHelptext, setguestdispHelptext] = React.useState("");
-
-  const [guestteamscore, setguestteamscore] = React.useState(0);
-
-
-  let handleguestteamscore = (event) => {
-    setguestteamscore(event.target.value);
-    (guestdispHelptext < 10) ? setguestdispHelptext("") : setguestdispHelptext("Enter Values < 100");
-
+  const [hometeamscore, sethometeamscore] = React.useState();
+  let [enableHomeScoreError, setEnableHomeScoreError] = React.useState("");
+  let handleHomeTeamScore = (value) => {
+    sethometeamscore(value);
+    (value >= 1 && value <= 3) ? setEnableHomeScoreError("") : setEnableHomeScoreError("The input should be the number from 1 to 3");
   }
 
-
+  const [guestteamscore, setguestteamscore] = React.useState();
+  let [enableGuestScoreError, setEnableGuestScoreError] = React.useState("");
+  let handleGuestTeamScore = (value) => {
+    setguestteamscore(value);
+    (value >= 1 && value <= 3) ? setEnableGuestScoreError("") : setEnableGuestScoreError("The input should be the number from 1 to 3");
+  }
 
 
   const classes = selectStyles();
@@ -138,13 +123,16 @@ function App() {
   };
   // const [answer,setAnswer]=useState("");
 
+  const [snackBarStatus, setSnackBarStatus] = React.useState("error");
+  const [snackBarMessage, setSnackBarMessage] = React.useState("This is a fail message!");
+
   return (
     <div className="app">
       <Nav />
       <div className="main-container">
         <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-          <Alert onClose={handleClose} severity="success">
-            Data submitted successfully!
+          <Alert onClose={handleClose} severity={snackBarStatus}>
+            {snackBarMessage}
           </Alert>
         </Snackbar>
 
@@ -214,15 +202,10 @@ function App() {
                   </FormControl>
                 </div>
                 <div className="teamScores-container add-flex-class">
-                  <TextField id="homeTeamScore" type="number" InputProps={{
-                    inputProps: { max: 25, min: 1 }
-                  }} onChange={handlehometeamscore}
-                    helperText={dispHelptext}
-                    label="TYPE HOME TEAM SCORE" variant="outlined" />
-                  <TextField id="guestTeamScore" type="number" InputProps={{
-                    inputProps: { max: 25, min: 1 }
-                  }} onChange={handleguestteamscore}
-                    helperText={guestdispHelptext} label="TYPE GUEST TEAM SCORE" variant="outlined" />
+                  <TextField id="homeTeamScore" type="number" onChange={(event) => { handleHomeTeamScore(event.target.value) }}
+                    value={hometeamscore} helperText={enableHomeScoreError} label="TYPE HOME TEAM SCORE" variant="outlined" />
+                  <TextField id="guestTeamScore" type="number" onChange={(event) => { handleGuestTeamScore(event.target.value) }}
+                    value={guestteamscore} helperText={enableGuestScoreError} label="TYPE GUEST TEAM SCORE" variant="outlined" />
                 </div>
               </div>
 
@@ -243,7 +226,7 @@ function App() {
               </div>
               <div className="nextdirector">
                 <div className="nextdet-container">
-                  <Button onClick={() => { handleClick(); callApi(); }} variant="contained" color="primary">   NEXT   </Button>
+                  <Button onClick={() => { callApi(); }} variant="contained" color="primary">   NEXT   </Button>
 
                 </div>
               </div>
@@ -433,7 +416,7 @@ function App() {
       "leagueId": "Sky Esports League-1617015905529",
       "leagueAdditionId": "Sky Esports League-1617015905529-2021-March-1617025320377",
       "homeTeamScore": hometeamscore,
-      "awayTeamScore": 2,
+      "awayTeamScore": guestteamscore,
       "matchStartTime": 1619244230000,
       "homeTeam": "Chennai Clutchers",
       "awayTeam": "Bengaluru Crushers",
@@ -481,12 +464,23 @@ function App() {
 
     Axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        console.log(response.data.error);
+        if (response.data.error) {
+          setSnackBarMessage('Please check the details entered!');
+          setSnackBarStatus('error');
+          setOpen(true);
+        }
+        else {
+          setSnackBarMessage('Successfully submitted!');
+          setSnackBarStatus('success');
+          setOpen(true);
+          setCurrentTab(1);
+          console.log(response.data);
+        }
       })
       .catch(function (error) {
         console.log(error);
       });
-
   }
 }
 function Tabpanel(props) {
