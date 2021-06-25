@@ -62,7 +62,21 @@ function App() {
     setguestteamscore(value);
     (value >= 1 && value <= 3) ? setEnableGuestScoreError("") : setEnableGuestScoreError("The input should be the number from 1 to 3");
   }
-
+  //input values for second page 
+  //for Haven(Firstmap)
+  const [havenHometeamscore, setHavenHometeamscore] = React.useState();
+  let [enablehavenHometeamscore, setEnablehavenHometeamscore] = React.useState("");
+  let handlehavenHometeamscore = (value) => {
+    setHavenHometeamscore(value);
+    (value >= 0 && value <= 3) ? setEnablehavenHometeamscore("") : setEnablehavenHometeamscore("The input should be the number from 1 to 3");
+  }
+  //For SecondMap
+  const [haveGuestteamscore, setHavenGuestteamscore] = React.useState();
+  let [enablehavenGuestteamscore, setEnablehavenGuestteamscore] = React.useState("");
+  let handlehavenGuestteamscore = (value) => {
+    setHavenGuestteamscore(value);
+    (value >= 0 && value <= 3) ? setEnablehavenGuestteamscore("") : setEnablehavenGuestteamscore("The input should be the number from 1 to 3");
+  }
 
   const classes = selectStyles();
 
@@ -209,6 +223,7 @@ function App() {
                 </div>
               </div>
 
+
               <div className="match-details">
                 <div className="matchdetails-header">COMMUNITY PREDICTIONS</div>
                 <form className={classes.root} noValidate autoComplete="off">
@@ -249,9 +264,9 @@ function App() {
                       SELECT MAP
                     </InputLabel>
                     <Select id="firstMap" value={firstMap} onChange={handleFirstMap} label="firstMap">
-                      <MenuItem value={10}>Delhi</MenuItem>
-                      <MenuItem value={20}>Hyderabad</MenuItem>
-                      <MenuItem value={30}>Pune</MenuItem>
+                      <MenuItem value={10}>HAVEN</MenuItem>
+                      <MenuItem value={20}>ICEBOX</MenuItem>
+                      <MenuItem value={30}>ASCENT</MenuItem>
                     </Select>
                   </FormControl>
                   <FormControl variant="outlined" className={classes.formControl}>
@@ -269,8 +284,8 @@ function App() {
                   </FormControl>
                 </div>
                 <div className="add-flex-class">
-                  <TextField id="outlined-basic" label="HOME TEAM SCORE" variant="outlined" />
-                  <TextField id="outlined-basic" label="GUEST TEAM SCORE" variant="outlined" />
+                  <TextField id="outlined-basic" type="number" onChange={(event) => { handlehavenHometeamscore(event.target.value) }} value={havenHometeamscore} label="HOME TEAM SCORE" helperText={enablehavenHometeamscore} variant="outlined" />
+                  <TextField id="outlined-basic" type="number" onChange={(event) => { handlehavenGuestteamscore(event.target.value) }} value={haveGuestteamscore} label="HOME TEAM SCORE" helperText={enablehavenGuestteamscore} label="GUEST TEAM SCORE" variant="outlined" />
                 </div>
                 <div className="add-flex-class">
                   <TextField id="outlined-basic" label="VOD LINK" variant="outlined" />
@@ -295,9 +310,9 @@ function App() {
                       <MenuItem value="">
                         <em>select</em>
                       </MenuItem>
-                      <MenuItem value={10}>delhi</MenuItem>
-                      <MenuItem value={20}>hyderabad</MenuItem>
-                      <MenuItem value={30}>pune</MenuItem>
+                      <MenuItem value={10}>HAVEN</MenuItem>
+                      <MenuItem value={20}>ICEBOX</MenuItem>
+                      <MenuItem value={30}>ASCENT</MenuItem>
                     </Select>
                   </FormControl>
                   <FormControl variant="outlined" className={classes.formControl}>
@@ -349,9 +364,9 @@ function App() {
                       <MenuItem value="">
                         <em>select</em>
                       </MenuItem>
-                      <MenuItem value={10}>delhi</MenuItem>
-                      <MenuItem value={20}>hyderabad</MenuItem>
-                      <MenuItem value={30}>pune</MenuItem>
+                      <MenuItem value={10}>HAVEN</MenuItem>
+                      <MenuItem value={20}>ICEBOX</MenuItem>
+                      <MenuItem value={30}>ASCENT</MenuItem>
                     </Select>
                   </FormControl>
                   <FormControl variant="outlined" className={classes.formControl}>
@@ -423,8 +438,9 @@ function App() {
       "matchId": "Sky Esports League-1617015905529-2021-March-1617025320377-Chennai Clutchers-1619244230000",
       "matchLink": "",
       "selectedByAwayTeam": [
+
         {
-          "homeTeamScore": 13,
+          "homeTeamScore": havenHometeamscore,
           "awayTeamScore": 5,
           "screenShot": "",
           "videoLink": "",
@@ -446,6 +462,7 @@ function App() {
           "videoLink": "",
           "mapName": "ASCENT"
         }
+
       ],
       "homeTeamTieBreaker": 16,
       "awayTeamTieBreaker": -16,
@@ -483,8 +500,8 @@ function App() {
         });
     }
     else {
-      setSnackBarMessage('Please check the details entered!');
-      setSnackBarStatus('error');
+      setSnackBarMessage('Please enter the details with in range!');
+      setSnackBarStatus('warning');
       setOpen(true);
     }
   }
